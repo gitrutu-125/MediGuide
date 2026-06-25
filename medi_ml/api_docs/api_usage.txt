@@ -1,0 +1,50 @@
+=== Disease Prediction API ===
+
+Base URL:
+http://127.0.0.1:5000
+
+--------------------------------
+
+1. Check API Status
+
+GET /
+Response:
+"Disease Prediction API Running"
+
+--------------------------------
+
+2. Predict Disease
+
+POST /predict
+
+Request Body (JSON):
+{
+    "symptoms": ["fever", "cough", "headache"]
+}
+
+Response:
+{
+    "disease": "flu",
+    "medicines": ["Paracetamol", "Ibuprofen"]
+}
+
+--------------------------------
+
+3. Get All Symptoms
+
+GET /symptoms
+
+Response:
+[
+    "fever",
+    "cough",
+    "headache",
+    ...
+]
+
+--------------------------------
+
+Notes:
+- Symptoms must match dataset column names
+- Always send JSON
+- Flask server must be running
